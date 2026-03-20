@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub Viral | Sequência de Elite</title>
+    <style>
+        :root { --bg: #050505; --card: #111; --gold: #c5a059; --accent: #fe2c55; --text: #fff; --dim: #777; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; align-items: center; }
+        header { padding: 40px; text-align: center; }
+        header h1 { font-size: 2rem; background: linear-gradient(90deg, #fe2c55, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; }
+        .container { width: 90%; max-width: 650px; }
+        .input-area { background: var(--card); padding: 20px; border-radius: 12px; border: 1px solid #222; margin-bottom: 30px; text-align: center; }
+        textarea { width: 100%; max-width: 450px; background: #000; border: 1px solid #333; color: #fff; padding: 12px; border-radius: 8px; font-size: 1rem; text-align: center; outline: none; }
+        .workflow { display: flex; flex-direction: column; gap: 15px; }
+        .step { background: var(--card); display: flex; align-items: center; padding: 15px; border-radius: 10px; border: 1px solid #222; transition: 0.3s; }
+        .num { font-size: 1.2rem; font-weight: 900; min-width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; border: 2px solid var(--gold); color: var(--gold); }
+        .info { flex-grow: 1; }
+        .info h3 { margin: 0; font-size: 1rem; }
+        .info p { margin: 0; font-size: 0.8rem; color: var(--dim); }
+        .btn { background: transparent; border: 1px solid #444; color: #fff; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
+        .btn:hover { background: #fff; color: #000; }
+        footer { padding: 40px; opacity: 0.3; font-size: 0.7rem; }
+    </style>
+</head>
+<body>
+    <header><h1>Hub Viral Pro</h1><p>Produção Sequencial Vertical</p></header>
+    <div class="container">
+        <div class="input-area"><textarea id="in" rows="2" placeholder="Tema ou Link aqui..."></textarea></div>
+        <div class="workflow">
+            <div class="step"><div class="num">1</div><div class="info"><h3>Cortes Virais</h3><p>Analisa e extrai os melhores momentos.</p></div><button class="btn" onclick="cp('c')">Copiar 1</button></div>
+            <div class="step"><div class="num">2</div><div class="info"><h3>Ganchos (Hooks)</h3><p>Aberturas de 3s para travar o scroll.</p></div><button class="btn" onclick="cp('g')">Copiar 2</button></div>
+            <div class="step"><div class="num">3</div><div class="info"><h3>Roteiros Canais</h3><p>TikTok, Reels e Shorts adaptados.</p></div><button class="btn" onclick="cp('r')">Copiar 3</button></div>
+            <div class="step"><div class="num">4</div><div class="info"><h3>Loop Infinito</h3><p>Conecta final com início.</p></div><button class="btn" onclick="cp('l')">Copiar 4</button></div>
+        </div>
+    </div>
+    <footer>&copy; 2026 BioCronos | Dr. Jose Spadeto</footer>
+    <script>
+        function cp(t){
+            const v=document.getElementById('in').value||"conteúdo"; let p="";
+            if(t==='c')p=`Atue como Editor de Viralização. Analise '${v}' e extraia 3 picos de interesse para vídeos curtos.`;
+            if(t==='g')p=`Gere 5 ganchos magnéticos para '${v}' focados em curiosidade e quebra de padrão visual.`;
+            if(t==='r')p=`Transforme '${v}' em roteiros de 55s adaptados para o sotaque do TikTok, Reels e Shorts.`;
+            if(t==='l')p=`Ajuste os roteiros de '${v}' com a técnica de Loop Infinito (o final conecta com o início).`;
+            navigator.clipboard.writeText(p); alert("Passo copiado!");
+        }
+    </script>
+</body>
+</html>
